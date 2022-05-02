@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: cluser-simpleingress
+spec:
+    selector:
+        app: react-app
+    ports:
+    - port: 80
+    # targetPort is the port which is container's internal port
+      targetPort: 8080
