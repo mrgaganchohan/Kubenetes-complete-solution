@@ -8,4 +8,4 @@ spec:
     ports:
     - port: 80
     # targetPort is the port which is container's internal port
-      targetPort: 8080
+      targetPort: 80

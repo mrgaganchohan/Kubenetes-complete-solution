@@ -8,7 +8,8 @@ spec:
   nodeName:  gaganchohan-nodepool-cjk54
   containers:
   - name: react-app-container
-    image: salamflamo/react-hello
+    image: reactregistrygagan.azurecr.io/reactregistrygagan.azurecr.io:v2
+    # image: salamflamo/react-hello
     resources:
       requests:
         memory: "500Mi"
@@ -16,5 +17,16 @@ spec:
       limits:
         memory: "600Mi"
         cpu: 600m
-    # ports:
-    #   - containerPort: 8080
+  imagePullSecrets:
+    - name: image-pull-secret-react-ingress
+
+# Create secret like this
+
+# kubectl create secret docker-registry image-pull-secret \
+#   --docker-server=reactregistrygagan.azurecr.io \
+#   --docker-username=<username> \
+#   --docker-password=<password> \
+#   --docker-email=<email> -o yaml --dry-run
+
+# copy and paste it in a file and then apply
+    
