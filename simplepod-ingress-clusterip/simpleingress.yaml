@@ -15,4 +15,11 @@ spec:
               name: cluser-simpleingress
               port: 
                 number: 80
+        - path: /api
+          pathType: Prefix
+          backend:
+            service:
+              name: cluser-simpleingress-node
+              port: 
+                number: 3000
               

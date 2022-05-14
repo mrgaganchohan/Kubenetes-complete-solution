@@ -8,7 +8,7 @@ spec:
   nodeName:  gaganchohan-nodepool-cjk54
   containers:
   - name: react-app-container
-    image: reactregistrygagan.azurecr.io/reactregistrygagan.azurecr.io:v2
+    image: mrgaganchohan/rickmorty:64version1
     # image: salamflamo/react-hello
     resources:
       requests:
@@ -23,10 +23,11 @@ spec:
 # Create secret like this
 
 # kubectl create secret docker-registry image-pull-secret \
-#   --docker-server=reactregistrygagan.azurecr.io \
-#   --docker-username=<username> \
-#   --docker-password=<password> \
-#   --docker-email=<email> -o yaml --dry-run
+#   # --docker-server=reactregistrygagan.azurecr.io \
+# --docker-server=https://index.docker.io/v1/ \ #for dockerhub enter this
+#   --docker-username=mrgaganchohan \
+#   --docker-password=tc67hQ_69S{.H,j \
+#   --docker-email=gaganchohan@icloud.com -o yaml --dry-run
 
 # copy and paste it in a file and then apply
     

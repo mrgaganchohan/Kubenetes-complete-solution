@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-basic
+  labels:
+    app: node-basic
+spec:
+  containers:
+  - name: node-basic-container
+    image: mrgaganchohan/node-basic:final1
+    # image: salamflamo/react-hello
+    resources:
+      requests:
+        memory: "100Mi"
+        cpu: 100m
+      limits:
+        memory: "100Mi"
+        cpu: 100m
